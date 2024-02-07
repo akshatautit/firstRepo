@@ -1,2 +1,2 @@
-# firstRepo 
-this is created by own..
+# gym_javascript
+this is a gym website.

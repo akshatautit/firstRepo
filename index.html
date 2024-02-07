@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB FITNESS</title>
+</head>
+<style>
+    /*  CSS reset */
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        color: aliceblue;
+        margin: 0px;
+        padding: 0px;
+        background: url('img1.jpg');
+    }
+
+    .left {
+        top: 20px;
+        position: absolute;
+        display: inline-block;
+
+        left: 34px;
+
+    }
+
+    .left img {
+        width: 80px;
+        filter: invert(100%);
+        align-self: center;
+        padding: 0px 15px;
+
+    }
+
+    .left img:hover {
+        background-color: gray;
+
+
+    }
+
+    .logoname {
+        text-align: center;
+        padding: 7px 1px;
+        line-height: 29px;
+        font-size: 22px;
+    }
+
+    .mid {
+
+        display: block;
+        width: 38%;
+        margin: 20px auto;
+        font-size: large;
+
+    }
+
+    .right {
+        position: absolute;
+        right: 27px;
+        top: 41px;
+        display: inline-block;
+
+    }
+
+    .btn {
+        margin: 4px 22px;
+        color: red;
+        background-color: black;
+        padding: 10px 15px;
+    }
+
+    .btn:hover {
+        background-color: gray;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+
+    .navbar {
+
+        display: inline-block;
+
+    }
+
+    .navbar li {
+        display: inline-block;
+
+    }
+
+
+    .navbar li a {
+        color: white;
+        padding: 34px 17px;
+        text-decoration: none;
+
+
+
+    }
+
+    .navbar li a:hover {
+        text-decoration: underline;
+    }
+
+    .block {
+
+
+        margin: 125px 74px;
+        padding: 1px 8px;
+        width: 390px;
+    }
+
+    .submit {
+        margin: 16px 29px;
+        padding: 7px 17px;
+        color: white;
+        background-color: black;
+    }
+
+    .submit:hover {
+        font-family: 'Baloo Bhai 2', cursive;
+
+    }
+
+    .email {
+        margin: 0px 9px;
+        padding: 10px 4px;
+
+    }
+
+    #emaail {
+        font-size: x-large;
+
+        padding: 20px 10px;
+        margin: 2px -21px;
+      
+     
+      
+    }
+    #call {
+        font-size: xx-large;
+
+        padding: 2px 72px;
+        margin: 2px -21px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left for logo-->
+        <div class="left">
+            <img src="img2.png" alt="">
+            <div class="logoname">
+                AB FITNESS
+            </div>
+
+        </div>
+        </div>
+        <!-- mid for nav -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FITNESS COACH</a></li>
+                <li><a href="#">VERIETY</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div><h2 id="login"></h2></div>
+        </div>
+        
+        <!-- right for buttons-->
+        <div class="right">
+            <button class="btn" onclick="callus()">Call Us Now</button><button class="btn" id="btnclick" onclick="showE()">Email Us
+            </button>
+            <p id="emaail"> </p>
+            <p id="call"> </p>
+        </div>
+        <!-- block-->
+        <div class="block">
+            <h1>
+                RESISTER HERE
+            </h1>
+            <form>
+                <div>
+                    <input type="text" name="" placeholder="Enter username" id="username"><br>
+                    <input type="text" name="" placeholder="password" id="password"><br>
+                </div>
+                <div>
+                    <button class="submit" onclick="login()">SUBMIT</button>
+                    <button class="submit" onclick="pass()">To Know Password</button>
+                </div>
+            </form>
+           
+        </div>
+    </header>
+
+    <script>
+        /* function hide() {
+          let btn = document.getElementById('btnclick');
+          let para = document.getElementById('emaail');
+          if (emaail.style.display != 'none'){
+              emaail.style.display = 'none';
+          } else {
+              emaail.style.display = 'block';
+          }
+      }*/
+
+    function showE() {
+        let a = "kadamaditya101@gmail.com"
+        if ( document.getElementById("emaail").innerHTML != a){
+        document.getElementById("emaail").innerHTML = a;
+        }else{
+            document.getElementById("emaail").innerHTML = " "; 
+        }
+    }
+    
+    function callus() {
+            let a = "8451970828"
+            if ( document.getElementById("call").innerHTML != a){
+            document.getElementById("call").innerHTML = a;
+        }else{
+            document.getElementById("call").innerHTML = " "; 
+        }
+    }
+
+    function login(){
+    let c = "Login Successfully"
+    var a = document.getElementById('username').value;
+    var b = document.getElementById('password').value;
+    if(a=='admin'||b=='admin'){
+        alert("You Login Successfully");
+    }else{
+        alert("Login Failed Try again");
+    }
+    }
+    function pass(){
+        alert("username= admin & password=admin")
+    }
+    </script>
+</body>
+
+</html>
