@@ -1,2 +1,2 @@
-# firstRepo
-created with aditya
+# firstRepo 
+this is created by own..
